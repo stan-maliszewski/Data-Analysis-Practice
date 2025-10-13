@@ -8,7 +8,7 @@ In this section I will list my data analytics projects with a brief overview.
 
 **Objectives**: To determine whether migration inflows are associated with immediate changes in unemployment rates across 38 OECD countries. Namely, does a surge in immigration correlate with changes in unemployment rates a year later and five years later? Can migration inflows (outflows) be used to predict future unemployment rates?
 
-**Skills**: Data cleaning, exploratory data analysis, correlation matrix, regression models, ggplot2 visualizations
+**Skills**: Data cleaning, exploratory data analysis, correlation matrix, linear regression models, ggplot2 visualizations
 
 **Technology**: R language, RStudio, tidyverse package
 
