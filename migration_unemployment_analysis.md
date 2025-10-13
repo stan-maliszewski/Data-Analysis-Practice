@@ -282,6 +282,8 @@ The analysis does not include key control variables such as GDP growth, inflatio
 I took this project primarily to practice data analysis in R on open global datasets. It does, however, rely on aggregate data and uses simple linear models. Therefore, any conclusions and interpretations from this study should be made with caution.
 
 
+Data sources: [World Bank DataBank](https://data.worldbank.org/) and [OECD Data Explorer](https://data-explorer.oecd.org/).
+
 
 
 
