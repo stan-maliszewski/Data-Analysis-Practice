@@ -115,6 +115,8 @@ df_oecd %>% summarise(
 
 Visual comparison of migration and unemployment trends:
 
+![Avarege Migration Inflows vs Unemployment Rates Across OECD Countries](https://github.com/stan-maliszewski/Data-Analysis-Practice/blob/main/outputs/1-avg_oecd.png)
+
 ```r
 df_oecd %>%
   group_by(year) %>%
@@ -148,6 +150,8 @@ df_oecd <- df_oecd %>%
 ```
 
 ### Correlation analysis
+
+![Correlation Matrix: Migration and Unemployment, OECD](https://github.com/stan-maliszewski/Data-Analysis-Practice/blob/main/outputs/4-Heatmap.png)
 
 A simple correlation matrix reveals a weak negative relationship between migration inflows and unemployment in the same and following year (-0.25), with the relationship nearly disappearing after five years (-0.09).
 
@@ -186,6 +190,9 @@ ggplot(df_oecd, aes(x = migration_share, y = unemp_5y_later)) +
        y = "Unemployment rate (year t+5)") +
   theme_minimal()
 ```
+![Migration vs Future Unemployment, 1Y](https://github.com/stan-maliszewski/Data-Analysis-Practice/blob/main/outputs/5-Linear-reg_1y.png)
+!![Migration vs Future Unemployment, 5Y](https://github.com/stan-maliszewski/Data-Analysis-Practice/blob/main/outputs/6-Linear-reg_5y.png)
+
 
 Results indicate a significant short-term negative relationship (R² = 0.059, p < 0.001) that weakens after five years (R² = 0.008, p ≈ 0.027).
 
@@ -216,6 +223,10 @@ ggplot(df_oecd, aes(x = migration_share, y = unemp_5y_later)) +
        y = "Unemployment rate (%)") +
   theme_minimal()
 ```
+![Migration Unemployment by Country](https://github.com/stan-maliszewski/Data-Analysis-Practice/blob/main/outputs/7-country1.png)
+![Migration Unemployment by Country](https://github.com/stan-maliszewski/Data-Analysis-Practice/blob/main/outputs/8-country5.png)
+
+
 
 ### Fixed-effects models
 
@@ -241,6 +252,9 @@ ggplot(coefs_5y, aes(x = reorder(country_code, estimate), y = estimate)) +
   labs(title = "Country Fixed Effects on Unemployment (5-year model)",
        x = "Country Code", y = "Estimated baseline effect") + theme_minimal()
 ```
+![Country Fixed Effects on Unemployment](https://github.com/stan-maliszewski/Data-Analysis-Practice/blob/main/outputs/9-Horizontal1.png)
+![Country Fixed Effects on Unemployment](https://github.com/stan-maliszewski/Data-Analysis-Practice/blob/main/outputs/10-Horizontal-5.png)
+
 
 Results show consistently higher baseline unemployment in Spain, Greece, and Slovakia, and lower in Korea, Mexico, and Japan, even after controlling for migration.
 
@@ -259,3 +273,4 @@ Overall, migration inflows are associated with a short-term reduction in unemplo
 The analysis does not include key control variables such as GDP growth, inflation, or demographic change, which may influence unemployment. Adding these in future models would likely improve explanatory power. Furthermore, this study relies on aggregate data and simple linear methods; causal interpretations should therefore be made with caution.
 
 This project was undertaken as a self-directed learning exercise to practice data analysis in R using open global datasets. It demonstrates a basic but effective workflow for quantitative social research using reproducible code.
+
