@@ -4,7 +4,7 @@ This is a repository I created to track my progress in Data Analytics!
 # Portfolio Projects
 In this section I will list my data analytics projects with a brief overview.
 ## An analysis of short-term effects of migration inflows on unemployment rates across 38 OECD countries (1991–2020)
-**Code**: 
+**Code**: [Complete Project: Miration vs Unemployment Rates Analysis, OECD 1991-2020](https://github.com/stan-maliszewski/Data-Analysis-Practice/blob/main/migration_unemployment_analysis.md)
 
 **Objectives**: To determine whether migration inflows are associated with immediate changes in unemployment rates across 38 OECD countries. Namely, does a surge in immigration correlate with changes in unemployment rates a year later and five years later? Can migration inflows (outflows) be used to predict future unemployment rates?
 
