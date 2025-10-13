@@ -236,6 +236,8 @@ ggplot(df_oecd, aes(x = migration_share, y = unemp_5y_later)) +
 
 To account for country-level heterogeneity, I used models with country-specific intercepts.
 
+I gave each country its own baseline unemployment intercept, allowing the model to compare how unemployment differs between countries after accounting for migration levels.
+
 
 ```r
 model_fe_1y <- lm(unemp_next_year ~ migration_share + factor(`Country Code`), data = df_oecd)
@@ -267,7 +269,7 @@ Results show consistently higher baseline unemployment in Spain, Greece, and Slo
 
 ## Findings
 
-Across 38 OECD countries (1991–2020), the results show a weak but statistically significant negative relationship between migration inflows and unemployment rates a year later, and an even weaker one five years later. A one-percentage-point increase in migration share is associated with a roughly 1.8 percentage-point decrease in unemployment the following year (β = -1.79, p < 0.001). The effect diminishes to -0.63 (p = 0.027) after five years.
+Across 38 OECD countries (1991–2020), the results show a weak but statistically significant negative relationship between migration inflows and unemployment rates a year later, and an even weaker one five years later. A one-percentage-point increase in migration share is associated with a roughly 1.8 percentage-point decrease in unemployment the following year (β = -1.79, p < 0.001). The effect diminishes to -0.63 (p = 0.027) after five years. 
 
 Overall, migration inflows are associated with a short-term reduction in unemployment, although the it is small and weakens over time. 
 
@@ -278,6 +280,7 @@ Overall, migration inflows are associated with a short-term reduction in unemplo
 The analysis does not include key control variables such as GDP growth, inflation, or demographic change, which also influence unemployment. Adding these in future models could improve its accuracy / exploratory power.
 
 I took this project primarily to practice data analysis in R on open global datasets. It does, however, rely on aggregate data and uses simple linear models. Therefore, any conclusions and interpretations from this study should be made with caution.
+
 
 
 
