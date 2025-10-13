@@ -1,5 +1,7 @@
 # An analysis of short-term effects of migration inflows on unemployment rates across 38 OECD countries (1991–2020)
 
+_Disclaimer: This project is a practice exercise in R-based data analysis using publicly available data. Findings should not be interpreted as providing definitive conclusions._
+
 ## Abstract
 
 This project investigates whether migration inflows are associated with short-term changes in unemployment rates across 38 OECD countries between 1991 and 2020. Using publicly available data from the World Bank and OECD, I constructed a dataset and examined how net migration (as a share of population) relates to unemployment one and five years later.
@@ -276,6 +278,7 @@ Overall, migration inflows are associated with a short-term reduction in unemplo
 The analysis does not include key control variables such as GDP growth, inflation, or demographic change, which also influence unemployment. Adding these in future models could improve its accuracy / exploratory power.
 
 I took this project primarily to practice data analysis in R on open global datasets. It does, however, rely on aggregate data and uses simple linear models. Therefore, any conclusions and interpretations from this study should be made with caution.
+
 
 
 
