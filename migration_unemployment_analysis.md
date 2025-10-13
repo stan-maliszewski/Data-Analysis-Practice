@@ -2,11 +2,11 @@
 
 ## Abstract
 
-This study investigates whether migration inflows are associated with short-term changes in unemployment rates across 38 OECD countries between 1991 and 2020. Using publicly available data from the World Bank and OECD, I constructed a panel dataset and examined how net migration (as a share of population) relates to unemployment one and five years later.
+This project investigates whether migration inflows are associated with short-term changes in unemployment rates across 38 OECD countries between 1991 and 2020. Using publicly available data from the World Bank and OECD, I constructed a dataset and examined how net migration (as a share of population) relates to unemployment one and five years later.
 
-The results suggest a modest but statistically significant negative relationship between migration inflows and unemployment in the following year. On average, countries experiencing higher migration inflows tend to record slightly lower unemployment rates the next year (β = -1.79, p < 0.001, R² = 0.059). This effect diminishes over time but remains weakly negative five years later (β = -0.63, p = 0.027, R² = 0.008).
+The results suggest a weak but statistically significant negative relationship between migration inflows and unemployment in the following year. On average, countries experiencing higher migration inflows tend to record slightly lower unemployment rates the next year (β = -1.79, p < 0.001, R² = 0.059). This negative effect diminishes over time but is nonetheless present five years later (β = -0.63, p = 0.027, R² = 0.008).
 
-These findings indicate that migration inflows are not linked to rising unemployment; if anything, they correlate with small short-term declines. However, the strength and direction of this relationship vary considerably between countries, emphasising the importance of national labour market structures and policies. While the study omits several control variables and serves primarily as a learning exercise in R-based data analysis, it provides an accessible illustration of how migration’s labour market effects can be explored using open data and simple econometric tools.
+These findings indicate that migration inflows lead to short-term declines in unemployment. However, the strength and direction of this relationship vary significantly between countries, emphasising the importance of national labour market structures and policies. While the study omits several control variables and serves primarily as a learning exercise in R-based data analysis, it provides an illustration of how open data can be explored.
 
 ---
 
@@ -129,6 +129,8 @@ df_oecd %>%
        y = "Rate (%)", x = "Year") +
   theme_minimal()
 ```
+
+It would arguably be too soon for migration to have a measurable impact on the same year unemployment rates; nonetheless, a visual negative correlation across OECD countries can be observed. 
 
 ---
 
@@ -273,4 +275,5 @@ Overall, migration inflows are associated with a short-term reduction in unemplo
 The analysis does not include key control variables such as GDP growth, inflation, or demographic change, which may influence unemployment. Adding these in future models would likely improve explanatory power. Furthermore, this study relies on aggregate data and simple linear methods; causal interpretations should therefore be made with caution.
 
 This project was undertaken as a self-directed learning exercise to practice data analysis in R using open global datasets. It demonstrates a basic but effective workflow for quantitative social research using reproducible code.
+
 
